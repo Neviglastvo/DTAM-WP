@@ -1,0 +1,84 @@
+.section-students-learn
+	width: 100%
+	padding: 100px 0
+	background-color: $black
+	display: flex
+	flex-direction: column
+
+
+	&__container
+		display: flex
+		flex-wrap: wrap
+
+	&__item-container
+		width: 100%
+		flex: calc(100%/3)
+		max-width: calc(100%/3)
+		+r(1366)
+			flex: calc(100%/2)
+			max-width: calc(100%/2)
+		+r(768)
+			flex: 100%
+			max-width: 100%
+			min-width: 100%
+
+	&__item
+		position: relative
+		overflow: hidden
+		display: flex
+		align-items: center
+		justify-content: center
+		padding: 30px
+		overflow: hidden
+		+r(480)
+			padding: 15px
+		&:after
+			content: ""
+			display: block
+			padding-bottom: 75%
+		&:hover
+			.section-students-learn__img-container
+				filter: none
+				+scale(1.05)
+
+			.section-students-learn__item-title
+				@extend .gradient-text
+
+
+	&__item-title
+		font-size: 34px
+		line-height: 38px
+		font-family: $fr
+		font-weight: 500
+		color: $white
+		text-align: center
+		z-index: 1
+		+r(480)
+			font-size: 28px
+			line-height: 32px
+		+r(370)
+			font-size: 24px
+			line-height: 28px
+
+
+
+	&__img-container
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		+scale(1.2)
+
+		+blur(10px)
+		+tr(1s)
+		&:after
+			content: ""
+			+coverdiv
+			background-color: rgba(0, 0, 0, 0.75)
+			+tr(1s)
+	&__img
+		z-index: 1
+		width: 100%
+		height: auto
+		object-fit: cover
