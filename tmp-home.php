@@ -208,9 +208,9 @@ get_header();
 		</div>
 	</div>
 
-	<div class="section-enrollees container">
+	<div class="section-enrollees ">
 		<h6 class="block-title block-title--on-dark"><?php the_field('enrollees-block-title'); ?></h6>
-		<div class="section-enrollees__container js-slider-enrollees">
+		<div class="section-enrollees__container container js-slider-enrollees">
 
 			<?php if( have_rows('enrollees-repeater') ): ?>
 				<?php while( have_rows('enrollees-repeater') ): the_row(); ?>
@@ -237,9 +237,9 @@ get_header();
 		</div>
 	</div>
 
-	<div class="section-famous container">
+	<div class="section-famous ">
 		<h6 class="block-title block-title--on-dark"><?php the_field('famous-block-title'); ?></h6>
-		<div class="section-famous__container js-slider-enrollees">
+		<div class="section-famous__container container js-slider-enrollees">
 
 			<?php if( have_rows('famous-repeater') ): ?>
 				<?php while( have_rows('famous-repeater') ): the_row(); ?>

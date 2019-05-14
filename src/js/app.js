@@ -66,10 +66,6 @@ $(document).ready(function() {
     $(target).css('height', minHeight);
   }
 
-
-
-
-
   $('.js-accordeon-action').on('click', function(e) {
     e.preventDefault();
 
